@@ -88,7 +88,7 @@ import { cn } from "@/lib/utils";
 import { Transition } from "@/lib/transition";
 import { Button } from "./button";
 import { navItems } from "@/data";
-import Link from "next/link";
+import Navbar from "../gallery/navbar";
 
 export const FloatingNav = ({ className }: { className?: string }) => {
   const navbarRef = useRef<HTMLDivElement | null>(null); // Reference for Navbar
@@ -132,11 +132,9 @@ export const FloatingNav = ({ className }: { className?: string }) => {
   return (
     <>
       {/* Navbar */}
-      <div ref={navbarRef} className="h-[4rem] w-full bg-gray-800">
-        <div className="text-white text-center py-3">Navbar</div>
+      <div ref={navbarRef}>
+          <Navbar />
       </div>
-
-      {/* Floating Navigation */}
       <AnimatePresence>
         {navbarOutOfView && visible && (
           <motion.div
@@ -172,12 +170,12 @@ export const FloatingNav = ({ className }: { className?: string }) => {
             </Transition>
           ))}
 
-            <Link href="/contact">
+            <Transition href="/contact">
               <Button variant='outline' size='sm' className='text-xs text-slate-900 relative rounded-full'>
                 <span >Book Now!</span>
                 <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
               </Button>
-            </Link>
+            </Transition>
           </motion.div>
         )}
       </AnimatePresence>

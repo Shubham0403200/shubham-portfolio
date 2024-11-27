@@ -1,6 +1,5 @@
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import Footer from "@/components/gallery/footer";
-// import Navbar from "@/components/gallery/navbar";
 
 export default function MainLayout({
   children,
@@ -9,7 +8,6 @@ export default function MainLayout({
 }) {
   return (
       <>
-          {/* <Navbar />   */}
           <FloatingNav/>
           <main>
             {children}
