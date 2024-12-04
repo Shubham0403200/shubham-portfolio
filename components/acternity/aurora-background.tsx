@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { AuroraBackground } from "../ui/aurora-background";
+import { Transition } from "@/lib/transition";
 
 export function AuroraBackgroundFunction() {
   return (
@@ -16,15 +17,17 @@ export function AuroraBackgroundFunction() {
         }}
         className="relative flex flex-col gap-4 items-center justify-center px-4"
       >
-        <div className="text-3xl md:text-7xl font-bold text-white text-center">
-          Background lights are cool you know.
+        <div className="text-3xl md:text-6xl font-bold text-white text-center">
+          Building Websites that Build Businesses
         </div>
-        <div className="font-extralight text-base md:text-4xl text-neutral-200 py-4">
-          And this, is chemical burn.
+        <div className="font-extralight text-base md:text-3xl text-neutral-200 py-4">
+          Full-stack and Android solutions to help your ideas thrive online.
         </div>
-        <button className="bg-black dark:bg-white rounded-full w-fit text-white px-4 py-2">
-          Debug now
-        </button>
+        <Transition href='/contact' >
+          <button className="bg-black dark:bg-white rounded-full w-fit text-white px-5 py-3">
+            Plan Your Website with Us
+          </button>
+        </Transition>
       </motion.div>
     </AuroraBackground>
   );

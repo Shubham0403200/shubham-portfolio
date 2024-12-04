@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { navItems } from "@/data";
+import { Transition } from "@/lib/transition";
 
 interface NavItemsProps {
   closeSheet?: () => void;
@@ -23,7 +23,7 @@ const NavItems: React.FC<NavItemsProps> = ({ closeSheet }) => {
               isActive && "text-slate-50"
             }  font-medium whitespace-nowrap text-sm ml-3 md:text-h5-clamp capitalize text-slate-200 `}
           >
-            <Link href={link.link}>{link.name}</Link>
+            <Transition href={link.link}>{link.name}</Transition>
           </li>
         );
       })}
