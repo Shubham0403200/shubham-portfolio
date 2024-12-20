@@ -5,6 +5,7 @@ import MobileNav from './mobile-nav';
 import { Transition } from '@/lib/transition';
 import Logo from '@/app/assets/logo1.png';
 import Logo1 from '@/app/assets/mobile1.png';
+import { Button } from '../ui/button';
 
 const Navbar = () => {
   return (
@@ -32,8 +33,13 @@ const Navbar = () => {
         />
       </Transition>
       <div className='flex items-center gap-3'>
-        <div className='hidden md:flex max-w-xl w-full mr-4'>
+        <div className='hidden md:flex max-w-xl w-full gap-4 items-center'>
           <NavItems />
+          <Transition href='/contact'>
+                <Button size='sm' className="bg-teal-600 hover:bg-teal-900 px-5 py-3 rounded-full" >
+                  Book Now!
+                </Button>
+          </Transition>
         </div>
         <MobileNav />
       </div>

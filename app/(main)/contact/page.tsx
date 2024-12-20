@@ -59,6 +59,12 @@ const ContactPage = () => {
   };
 
   const handleSubmit = async () => {
+
+    if (response.budget === "" || response.work === "" || response.name === "" || response.email === "" ||response.mobile === "" ||response.country === "" ||response.details === "" ||response.image === "") { 
+      alert("Please Fill All the Parameters!")
+      return;
+    }
+
     try {   
       const newResponse = await fetch("/api/send-mail", {
         method: "POST",
@@ -79,9 +85,9 @@ const ContactPage = () => {
           country: "", 
           details: "", 
         }) 
-        alert("tje worl is fdone")
+        alert("Your Response is successfully sent!")
       } else { 
-        alert("tje worl is fucked up")
+        alert("Something went wrong. Please try again!")
       }
     } catch (error) {
       console.error("Error sending email: ", error);
@@ -90,18 +96,18 @@ const ContactPage = () => {
     
   return (
     <AuroraBackground>
-      <div className="w-full h-[80vh] overflow-y-auto no-scrollbar md:w-[80vw] z-[999] mt-12 p-4 mx-auto bg-black/20 rounded-lg shadow-lg space-y-8">
+      <div className=" h-[90vh] overflow-y-auto no-scrollbar w-[90vw] z-[99] md:mt-8 p-4 mx-auto bg-black/15 rounded-lg shadow-lg space-y-8">
 
         {/* Header of the page */}
-        <div className="flex flex-col gap-y-1">
-          <h2 className="text-md font-medium text-slate-200"> We are happy to help you! </h2>
-          <h2 className="text-4xl font-semibold text-slate-100"> Get In Touch </h2>
+        <div className="flex flex-col items-center justify-center gap-y-1">
+          <h2 className="text-3xl md:text-6xl font-semibold shadow-lg text-white"> Get In Touch </h2>
+          <h2 className="text-md md:text-xl text-gray-200"> We are happy to help you! </h2>
         </div>
 
         {/*  */}
         <div>
           <h2 className="text-lg font-semibold text-slate-300 mb-4">What you Need?</h2>
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center gap-2 md:gap-4">
             {workTypes.map((type) => (
               <div
                 key={type}
@@ -110,7 +116,7 @@ const ContactPage = () => {
                   setResponse((prevResponse) => ({ ...prevResponse, work: type })); 
                 }}
                 className={cn(
-                  "cursor-pointer px-4 py-2 border rounded-lg text-center transition hover:bg-white hover:text-slate-800 border-slate-100 ",
+                  "cursor-pointer px-4 py-2 border rounded-lg text-center transition hover:bg-white hover:text-slate-800 border-slate-100 text-xs md:text-base",
                   selectedWork === type && "border-slate-800 bg-slate-100 text-slate-800"
                 )}
               >
@@ -123,7 +129,7 @@ const ContactPage = () => {
         {/* Step 2: Budget */}
         <div>
           <h2 className="text-lg font-semibold text-gray-300 mb-4">Select Your Budget</h2>
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center gap-2 md:gap-4">
             {budgets.map((budget) => (
               <div
                 key={budget}
@@ -132,7 +138,7 @@ const ContactPage = () => {
                   setResponse((prevResponse) => ({ ...prevResponse, budget: budget })); // Update the `budget` field in the state
                 }}
                 className={cn(
-                  "cursor-pointer px-4 py-2 border rounded-lg text-center transition hover:bg-white hover:text-slate-800 border-slate-100 ",
+                  "cursor-pointer px-4 py-2 border rounded-lg text-center transition hover:bg-white hover:text-slate-800 border-slate-100 text-xs md:text-base",
                   selectedBudget === budget && "border-slate-800 bg-slate-100 text-slate-800"
                 )}
               >
@@ -167,7 +173,9 @@ const ContactPage = () => {
             <Textarea placeholder="Enter specifics of your project!" className='bg-transparent border-white text-white' name='details' value={response.details} onChange={handleInputChange}/>
         </div>
         <FileUpload onChange={handleFileChange} />
-        <Button  onClick={handleSubmit}> Submit Request! </Button>
+        <Button onClick={handleSubmit} className="bg-teal-600 hover:bg-teal-900 px-5 py-3 rounded-full flex items-center w-full" >
+          Book Now!
+        </Button>
       </div>
     </AuroraBackground>
   );

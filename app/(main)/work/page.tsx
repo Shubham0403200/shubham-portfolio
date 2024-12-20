@@ -13,15 +13,14 @@ interface CategoryCounts {
 
 const WorkPage = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [viewType, setViewType] = useState("Table"); // Toggle between table and grid view
+  const [viewType, setViewType] = useState("Table"); 
 
-  // Add category and metadata to products for example purposes
   const enhancedProducts = products.map((product, index) => ({
     ...product,
-    category: index % 2 === 0 ? "Design" : "Development", // Example categories
-    location: "Remote", // Example location
-    service: index % 2 === 0 ? "UI/UX Design" : "Web Development", // Example service
-    year: 2023 - (index % 5), // Example year
+    category: index % 2 === 0 ? "Design" : "Development", 
+    location: "Remote", 
+    service: index % 2 === 0 ? "UI/UX Design" : "Web Development", 
+    year: 2023 - (index % 5), 
   }));
 
   const filteredProducts =
@@ -44,7 +43,7 @@ const WorkPage = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-4xl md:text-6xl font-bold mb-2">
+        <h1 className="text-3xl md:text-5xl font-bold mt-4 mb-2">
           Creating Next-Level Digital Products
         </h1>
         <p className="text-gray-400 text-lg">
@@ -64,7 +63,7 @@ const WorkPage = () => {
             <Button
               key={category}
               size='sm'
-              className={`rounded-full text-xs md:text-base font-medium ${
+              className={`rounded-full text-xs md:text-sm font-medium ${
                 activeCategory === category
                   ? "bg-teal-400 text-gray-900"
                   : "bg-gray-700 text-gray-200 hover:bg-gray-600"
@@ -78,9 +77,9 @@ const WorkPage = () => {
         <Button
           size='sm'
           onClick={() => setViewType(viewType === "Table" ? "Grid" : "Table")}
-          className="rounded-full text-xs md:text-base bg-teal-400 text-gray-900 font-medium hover:bg-teal-500"
+          className="rounded-full text-xs md:text-sm bg-teal-400 text-gray-900 font-medium hover:bg-teal-500"
         >
-          {viewType === "Table" ? "Switch to Grid" : "Switch to Table"}
+          {viewType === "Table" ? "Grid" : "Table"}
         </Button>
       </motion.div>
 
