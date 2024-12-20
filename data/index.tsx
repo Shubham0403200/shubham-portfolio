@@ -22,94 +22,136 @@ export const products = [
   {
     title: "Moonbeam",
     link: "https://gomoonbeam.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+    category: "Development",
+    location: "Remote",
+    service: "Web Development",
+    year: 2023,
   },
   {
     title: "Cursor",
     link: "https://cursor.so",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+    category: "Development",
+    location: "Remote",
+    service: "Web Development",
+    year: 2023,
   },
   {
     title: "Rogue",
     link: "https://userogue.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+    category: "Gaming",
+    location: "Remote",
+    service: "Game Development",
+    year: 2022,
   },
-
   {
     title: "Editorially",
     link: "https://editorially.org",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+    category: "Content Creation",
+    location: "New York, USA",
+    service: "Content Management System",
+    year: 2021,
   },
   {
     title: "Editrix AI",
     link: "https://editrix.ai",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+    category: "AI Tools",
+    location: "San Francisco, USA",
+    service: "AI Writing Assistant",
+    year: 2023,
   },
   {
     title: "Pixel Perfect",
     link: "https://app.pixelperfect.quest",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+    category: "Design",
+    location: "Remote",
+    service: "Design Tool",
+    year: 2022,
   },
-
   {
     title: "Algochurn",
     link: "https://algochurn.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+    category: "AI Tools",
+    location: "Remote",
+    service: "Algorithmic Trading",
+    year: 2021,
   },
   {
     title: "Aceternity UI",
     link: "https://ui.aceternity.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+    category: "Development",
+    location: "Remote",
+    service: "UI Design Kit",
+    year: 2022,
   },
   {
     title: "Tailwind Master Kit",
     link: "https://tailwindmasterkit.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+    category: "Design",
+    location: "Remote",
+    service: "UI Framework",
+    year: 2023,
   },
   {
     title: "SmartBridge",
     link: "https://smartbridgetech.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
+    category: "Tech",
+    location: "Toronto, Canada",
+    service: "IoT Solutions",
+    year: 2022,
   },
   {
     title: "Renderwork Studio",
     link: "https://renderwork.studio",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+    category: "Design",
+    location: "London, UK",
+    service: "3D Rendering",
+    year: 2021,
   },
-
   {
     title: "Creme Digital",
     link: "https://cremedigital.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+    category: "Development",
+    location: "San Francisco, USA",
+    service: "Web Development",
+    year: 2023,
   },
   {
     title: "Golden Bells Academy",
     link: "https://goldenbellsacademy.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+    category: "Education",
+    location: "Remote",
+    service: "Online Learning Platform",
+    year: 2022,
   },
   {
     title: "Invoker Labs",
     link: "https://invoker.lol",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+    category: "Gaming",
+    location: "Remote",
+    service: "Game Development",
+    year: 2021,
   },
   {
     title: "E Free Invoice",
     link: "https://efreeinvoice.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+    thumbnail: "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+    category: "Business",
+    location: "Remote",
+    service: "Invoice Management",
+    year: 2023,
   },
 ];

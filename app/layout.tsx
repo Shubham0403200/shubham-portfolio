@@ -8,8 +8,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Portfolio Shubham",
-  description: "A portfolio website for Shubham",
+  title: "CodeCrafters Studio",
+  description: "Your Vision - Our Mission. Freelancing Agency, SEO, Full Stack Developers, Saas.",
 };
 
 export default function RootLayout({

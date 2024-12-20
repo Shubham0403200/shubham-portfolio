@@ -6,13 +6,12 @@ import Image from 'next/image';
 
 export default function GetInTouch() {
   return (
-    <section className="bg-gray-900 text-white py-16">
-      <div className="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-10">
-        <motion.div
-          className="flex-1"
+    <section className="bg-gray-900 w-[90vw] md:max-w-7xl rounded-xl my-5 mx-auto text-white py-8 md:py-12">
+      <motion.div
           initial={{ opacity: 0 }} 
           animate={{ opacity: 1 }} 
           transition={{ duration: 1 }}
+          className="max-w-screen-xl mx-auto px-6 flex flex-col items-center gap-y-1"
         >
           <h2 className="text-3xl font-semibold text-center md:text-left text-gradient bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">
             Let&apos;s Build Something Great Together
@@ -27,8 +26,7 @@ export default function GetInTouch() {
               Get In Touch
             </Button>
           </Link>
-        </motion.div>
-      </div>
+      </motion.div>
       <div className="mt-12 text-center text-gray-400">
         <p className="italic">Trusted by leading businesses worldwide</p>
         <div className="flex justify-center gap-8 mt-4">
